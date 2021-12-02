@@ -1,4 +1,6 @@
 const mongoose=require("mongoose")
+const aggregatePaginate =require("mongoose-aggregate-paginate-v2")
+
 
 const propertySchema= mongoose.Schema({
   name:{
@@ -31,6 +33,8 @@ const propertySchema= mongoose.Schema({
     required:true
   }
 })
+
+propertySchema.plugin(aggregatePaginate)
 
 const Property=mongoose.model("Property",propertySchema)
 

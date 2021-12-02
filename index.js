@@ -6,6 +6,7 @@ const mongoose=require("mongoose")
 const routes= require("./server/routes")
 const passport = require("passport")
 const jwtStrategy = require("./server/middlewares/passport")
+const { convertToApiError, handleError } = require("./server/middlewares/apiError")
 require("dotenv").config()
 
 mongoose.connect(`${process.env.DB_STRING}`,{
@@ -27,6 +28,10 @@ passport.use("jwt",jwtStrategy)
 
 app.use("/api",routes)
 
+app.use(convertToApiError)
+app.use((err,req,res,next)=>{
+  handleError(err,res)
+})
 
 const port=process.env.PORT || 5000
 

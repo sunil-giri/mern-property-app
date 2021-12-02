@@ -1,0 +1,33 @@
+{
+  "name": "property-app",
+  "version": "1.0.0",
+  "description": "mern property app",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sunil Giri",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgen": "^2.0.16",
+    "mongo-sanitize": "^1.1.0",
+    "mongoose": "^6.0.14",
+    "mongoose-aggregate-paginate-v2": "^1.0.5",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.7.0",
+    "xss": "^1.0.10",
+    "xss-clean": "^0.1.1"
+  }
+}

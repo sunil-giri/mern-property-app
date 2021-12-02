@@ -18,19 +18,18 @@ const propertyController = {
     try{
       console.log(req.body)
       const property= await propertyService.addProperty(req)
-      res.json({property})
+      res.json(property)
     }catch(err){
       next(err)
     }
   },
-  async getPropertyByLocality(req,res,next){
-
-  },
-  async getPropertyByDate(req,res,next){
-
-  },
-  async getPropertyByPrice(req,res,next){
-
+  async paginateProperty(req,res,next){
+    try{
+      const property= await propertyService.paginateProperty(req)
+      res.json(property)
+    }catch(err){
+      next(err)
+    }
   }
 }
 

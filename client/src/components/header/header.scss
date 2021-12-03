@@ -1,0 +1,33 @@
+@import "../../styles/color.scss";
+
+
+@mixin flex-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+.nav{
+    @include flex-display;
+    list-style: none;
+    padding:1rem;
+    li{
+      a{
+        text-decoration: none;
+        font-size: x-large;
+        color: $helper-color;
+      }
+      a:focus{
+        color: $tertiary-color;
+      }
+    }
+}
+
+.navbar{
+  background-color: $primary-color;
+  color: $primary-color;
+}
+
+
+

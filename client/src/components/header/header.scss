@@ -11,7 +11,7 @@
 .nav{
     @include flex-display;
     list-style: none;
-    padding:1rem;
+    padding:1.5rem;
     li{
       a{
         text-decoration: none;

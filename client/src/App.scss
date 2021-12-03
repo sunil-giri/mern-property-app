@@ -2,6 +2,13 @@
 
 @import "./styles/color.scss";
 
+@mixin flex-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
 *{
   box-sizing: border-box;
   margin:0;
@@ -16,5 +23,7 @@ body{
 
 
 .App{
-
+  // @include flex-display;
+  // flex-direction: column;
+  // height: 100vh;
 }

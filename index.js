@@ -7,6 +7,7 @@ const routes= require("./server/routes")
 const passport = require("passport")
 const jwtStrategy = require("./server/middlewares/passport")
 const { convertToApiError, handleError } = require("./server/middlewares/apiError")
+const cors=require("cors")
 require("dotenv").config()
 
 mongoose.connect(`${process.env.DB_STRING}`,{
@@ -16,6 +17,9 @@ mongoose.connect(`${process.env.DB_STRING}`,{
   console.log("DB connected.")
 })
 
+
+app.use(cors());
+app.options("*", cors());
 app.use(express.json())
 app.use(xss())
 app.use(mongoSanitize())

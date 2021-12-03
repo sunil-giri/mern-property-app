@@ -1,0 +1,29 @@
+@import "../../styles/color.scss";
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 30vh;
+  width: 30vw;
+  border: 1px solid $helper-color;
+  background-color: $primary-color;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: $helper-color;
+
+  img{
+    height: 80%;
+    width: 80%;
+    object-fit: fill;
+    border-radius: 1rem;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .card{
+    width: 20vw;
+    height: 33vh;
+  }
+}

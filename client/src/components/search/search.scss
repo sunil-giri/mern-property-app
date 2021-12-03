@@ -1,0 +1,25 @@
+@import "../../styles/color.scss";
+
+.search{
+  margin: 20px;
+  form{
+    input{
+      padding:1rem;
+      border: none;
+      border-radius: 0.5rem;
+      margin-right: 0.5rem;
+      width: 30vw;
+      font-size: large
+    }
+    button{
+      @extend input;
+      width: auto;
+      margin-right: 0;
+      color: $helper-color;
+      background-color: $primary-color;
+    }
+    input:focus{
+      outline: none;
+    }
+  }
+}

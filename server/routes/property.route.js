@@ -7,7 +7,7 @@ const router=express.Router()
 router.get("/", propertyController.getAllProperty)
 router.post("/add",uploadOptions.array('images', 5), propertyController.addProperty)
 router.post("/paginate", propertyController.paginateProperty)
-
+router.get("/ROOT/property_image/:id",propertyController.getImage)
 
 
 module.exports= router

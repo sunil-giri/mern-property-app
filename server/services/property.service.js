@@ -16,7 +16,7 @@ const propertyService= {
     // console.log(req.body)
     const {name,description,address,locality,price} = req.body
     let imagesPaths = [];
-      const basePath = `http://localhost:5000/ROOT/property_image/`;
+      const basePath = `http://localhost:5000/api/property/ROOT/property_image/`;
     const files=req.files
       if (files) {
         files.map((file) => {

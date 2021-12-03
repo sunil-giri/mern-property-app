@@ -1,0 +1,31 @@
+@import "../../styles/color.scss";
+
+.homepage{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    
+    .gridview{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1rem;
+    align-items: center;
+    place-content: center;
+  }
+  .title{
+    font-size: xx-large;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+    .homepage{
+
+      .gridview{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+      }
+    }
+}

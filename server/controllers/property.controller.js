@@ -2,7 +2,7 @@ const httpStatus = require("http-status")
 const { ApiError } = require("../middlewares/apiError")
 const Property = require("../models/property")
 const propertyService = require("../services/property.service")
-
+const path=require("path")
 
 
 const propertyController = {
@@ -27,6 +27,17 @@ const propertyController = {
     try{
       const property= await propertyService.paginateProperty(req)
       res.json(property)
+    }catch(err){
+      next(err)
+    }
+  },
+  async getImage(req,res,next){
+    try{
+      let options={
+        root:path.normalize("E:/Web Projects All/React Projects/property-app/server/ROOT/property_image")
+      }
+      console.log(req.params.id)
+      res.sendFile(`/${req.params.id}`,options) 
     }catch(err){
       next(err)
     }

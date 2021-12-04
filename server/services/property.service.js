@@ -78,7 +78,7 @@ const propertyService= {
     const options={
       page:req.body.page,
       limit:10,
-      sort:{date:"desc"}
+      sort:{dateAdded:"desc"}
     }
 
     const property= await Property.aggregatePaginate(aggQuery,options)

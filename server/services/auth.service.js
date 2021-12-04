@@ -24,7 +24,10 @@ const authService = {
     if(!user){
       throw new Error("User not registered!")
     }
-    await user.signInWithEmailAndPassword(password)
+    const match=await user.signInWithEmailAndPassword(password)
+    if(!match){
+      throw new Error("Invalid Password")
+    }
     return user
   }
 }

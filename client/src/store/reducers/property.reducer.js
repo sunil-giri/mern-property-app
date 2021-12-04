@@ -8,6 +8,6 @@ export const propertyReducer =(state=initialState,{type,payload})=>{
   switch(type){
     case ADD_PROPERTY:return [...payload]
 
-    default :return initialState
+    default :return state
   }
 }

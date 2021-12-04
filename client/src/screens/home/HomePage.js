@@ -32,8 +32,8 @@ function HomePage() {
       <Search />
       <p className="title">Browse Properties</p>
       <div className="gridview">
-      {propertyArray!=undefined?propertyArray.map((val)=>{
-        return <Card value={val}/>
+      {propertyArray!=undefined?propertyArray.map((val,idx)=>{
+        return <Card value={val} key={idx}/>
       }):null}
       </div>
     </div>

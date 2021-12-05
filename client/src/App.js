@@ -4,6 +4,7 @@ import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import HomePage from './screens/home/HomePage';
 import Login from './screens/login/login';
+import Property from './screens/property/Property';
 import Register from './screens/register/register';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/property" element={<Property/>}/>
         </Routes>
       <Footer/>
     </BrowserRouter>

@@ -14,8 +14,9 @@ function Header() {
   }
   return (
     <div className="navbar">
+      <p className="brand"><Link to="/">Property App</Link></p>
       <ul className="nav">
-      <li><Link to="/">Property App</Link></li>
+      <li><Link to="/property">Add Property</Link></li>
       {!user?<li>
         <Link to="/login">Login/Sign Up</Link>
         </li>:

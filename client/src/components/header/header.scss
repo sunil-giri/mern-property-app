@@ -8,20 +8,34 @@
     width: 100vw;
 }
 
-.nav{
+.navbar{
     @include flex-display;
     list-style: none;
     padding:1.5rem;
+    color: $helper-color;
+    .nav{
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 1rem;
     li{
+      list-style-type: none;
       a{
         text-decoration: none;
-        font-size: x-large;
+        font-size: large;
         color: $helper-color;
       }
       a:focus{
         color: $tertiary-color;
       }
     }
+  }
+  .brand{
+    a{color: $helper-color;
+      text-decoration: none;
+      font-size: x-large;
+    }
+  }
 }
 
 .navbar{

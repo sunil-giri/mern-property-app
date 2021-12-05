@@ -13,10 +13,10 @@ const propertyService= {
     }
   },
   async addProperty(req){
-    // console.log(req.body)
+    console.log("Add property",req.body)
     const {name,description,address,locality,price} = req.body
     let imagesPaths = [];
-      const basePath = `http://localhost:5000/api/property/ROOT/property_image/`;
+    const basePath = `http://localhost:5000/api/property/ROOT/property_image/`;
     const files=req.files
       if (files) {
         files.map((file) => {

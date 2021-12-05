@@ -1,0 +1,54 @@
+@import "../../styles/color.scss";
+
+
+@mixin flexdisplay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property{
+  @include flexdisplay;
+  flex-direction: column;  
+  height: 83.7vh;
+
+  p{
+    font-size: larger;
+    font-weight: 700;
+    margin: 0.3rem;
+  }
+
+  form{
+    @include flexdisplay;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    background-color: $primary-color;
+    padding: 3rem;
+    color: $helper-color;
+    width: 50vw;
+
+    input{
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      width: 100%;
+      
+      button{
+        color: $helper-color;
+      }
+    }
+    button{
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+      background-color: $tertiary-color;
+      color: $secondary-color;
+    }
+
+    input:focus{
+      outline: none;
+    }
+  }
+}

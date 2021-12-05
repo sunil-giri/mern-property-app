@@ -14,7 +14,8 @@ function Search() {
     },{
       headers:{
         "Authorization": `Bearer ${token}`
-    }})
+    }
+    })
   }
   const dispatch= useDispatch()
   const [searchValue,setSearchValue]=useState("")

@@ -7,10 +7,14 @@ import "./search.scss"
 function Search() {
 
   const getData =async(page,value)=>{
+    let token=window.localStorage.getItem("x-access-token")
     return await axios.post("http://localhost:5000/api/property/paginate",{
       "page":page,
       "keyword":value
-    })
+    },{
+      headers:{
+        "Authorization": `Bearer ${token}`
+    }})
   }
   const dispatch= useDispatch()
   const [searchValue,setSearchValue]=useState("")

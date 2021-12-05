@@ -26,6 +26,7 @@ function Property() {
   }
 
   const postData=async()=>{
+    let token=window.localStorage.getItem("x-access-token")
     let formValues= new FormData()
     let imageArray=[]
     let images= document.querySelectorAll(".images")
@@ -44,7 +45,8 @@ function Property() {
     return await axios.post("http://localhost:5000/api/property/add",formValues,
     { mode: 'cors',
       headers: {
-        'Content-Type': 'multipart/form-data'
+        'Content-Type': 'multipart/form-data',
+        "Authorization": `Bearer ${token}`
       }})
   }
 

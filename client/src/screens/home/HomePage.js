@@ -9,14 +9,21 @@ import "./HomePage.scss"
 function HomePage() {
   const [data,setData]=useState("")
   const dispatch = useDispatch()
-
+  
   const getData =async(page)=>{
+    let token=window.localStorage.getItem("x-access-token")
+    console.log(token)
     return await axios.post("http://localhost:5000/api/property/paginate",{
       "page":page
+    },{
+      headers:{
+        "Authorization": `Bearer ${token}`
+    }
     })
   }
 
   useEffect(()=>{
+  
    async function fetchData(){
      const res=await getData(1)
      setData(res.data)

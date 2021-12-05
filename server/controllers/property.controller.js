@@ -36,7 +36,7 @@ const propertyController = {
       let options={
         root:path.normalize("E:/Web Projects All/React Projects/property-app/server/ROOT/property_image")
       }
-      console.log(req.params.id)
+      // console.log(req.params.id)
       res.sendFile(`/${req.params.id}`,options) 
     }catch(err){
       next(err)
